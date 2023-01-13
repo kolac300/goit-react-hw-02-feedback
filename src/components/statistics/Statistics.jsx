@@ -20,11 +20,11 @@ export default class Statistics extends Component {
 			<>
 				{sumTotal ?
 					<ul>
-						<Li>{good}</Li>
-						<Li>{neutral}</Li>
-						<Li>{bad}</Li>
-						<Li>{sumTotal}</Li>
-						<Li>{percentage}%</Li>
+						<Li>good: {good}</Li>
+						<Li>neutral: {neutral}</Li>
+						<Li>bad: {bad}</Li>
+						<Li>sumTotal: {sumTotal}</Li>
+						<Li>percentage: {percentage}%</Li>
 					</ul> :
 					<p>No feedback given</p>
 				}
