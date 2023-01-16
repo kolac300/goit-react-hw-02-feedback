@@ -8,26 +8,21 @@ export default class Statistics extends Component {
 			good: PropTypes.number.isRequired,
 			neutral: PropTypes.number.isRequired,
 			bad: PropTypes.number.isRequired,
-			total: PropTypes.func.isRequired,
-			positivePercentage: PropTypes.func.isRequired,
+			total: PropTypes.number.isRequired,
+			positivePercentage: PropTypes.number.isRequired,
 		}
 	}
 	render() {
 		const { good, neutral, bad, total, positivePercentage } = this.props
-		const sumTotal = total(good, neutral, bad)
-		const percentage = Math.floor(positivePercentage(good, sumTotal))
 		return (
 			<>
-				{sumTotal ?
-					<ul>
-						<Li>good: {good}</Li>
-						<Li>neutral: {neutral}</Li>
-						<Li>bad: {bad}</Li>
-						<Li>sumTotal: {sumTotal}</Li>
-						<Li>percentage: {percentage}%</Li>
-					</ul> :
-					<p>No feedback given</p>
-				}
+				<ul>
+					<Li>good: {good}</Li>
+					<Li>neutral: {neutral}</Li>
+					<Li>bad: {bad}</Li>
+					<Li>sumTotal: {total}</Li>
+					<Li>percentage: {positivePercentage}%</Li>
+				</ul>
 			</>
 		)
 	}
