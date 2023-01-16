@@ -6,7 +6,7 @@ export default class Section extends Component {
 	static {
 		Section.propTypes = {
 			tittle: PropTypes.string.isRequired,
-			children: PropTypes.element.isRequired
+			children: PropTypes.node.isRequired
 		}
 	}
 	render() {
