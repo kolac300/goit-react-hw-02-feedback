@@ -3,14 +3,12 @@ import PropTypes from 'prop-types'
 import { Li } from './Statistics.styled'
 
 export default class Statistics extends Component {
-	static {
-		Statistics.propTypes = {
-			good: PropTypes.number.isRequired,
-			neutral: PropTypes.number.isRequired,
-			bad: PropTypes.number.isRequired,
-			total: PropTypes.number.isRequired,
-			positivePercentage: PropTypes.number.isRequired,
-		}
+	static propTypes = {
+		good: PropTypes.number.isRequired,
+		neutral: PropTypes.number.isRequired,
+		bad: PropTypes.number.isRequired,
+		total: PropTypes.number.isRequired,
+		positivePercentage: PropTypes.number.isRequired,
 	}
 	render() {
 		const { good, neutral, bad, total, positivePercentage } = this.props
