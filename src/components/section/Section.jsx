@@ -3,11 +3,9 @@ import PropTypes from 'prop-types'
 import { SectionWrapper } from './Section.styled'
 
 export default class Section extends Component {
-	static {
-		Section.propTypes = {
-			tittle: PropTypes.string.isRequired,
-			children: PropTypes.node.isRequired
-		}
+	static propTypes = {
+		tittle: PropTypes.string.isRequired,
+		children: PropTypes.node.isRequired
 	}
 	render() {
 		const { tittle, children } = this.props
